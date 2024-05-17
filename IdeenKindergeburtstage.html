@@ -73,6 +73,11 @@
             margin-top: 0; /* Kein Abstand oben für die Überschrift */
             cursor: pointer; /* Zeigercursor für das Aufklappsymbol */
         }
+
+        .spiele-liste h2 {
+            margin-top: 10px; /* Platz zwischen "Spiele" und der Überschrift */
+            cursor: pointer; /* Zeigercursor für das Aufklappsymbol */
+        }
     </style>
 </head>
 <body>
@@ -111,30 +116,34 @@
         </li>
     </ul>
 
-    <h3>Tauziehen</h3>
-    <p>Beim Tauziehen treten zwei Teams gegeneinander an und ziehen an entgegengesetzten Enden eines Seils. Das Team, das die gegnerische Mannschaft über eine markierte Linie zieht, gewinnt das Spiel.</p>
-    <img src="Tauziehen.jpg" alt="Tauziehen" width="150">
-    
-    <h3>Luftballontanz</h3>
-    <p>Beim Luftballontanz tanzen die Kinder zu Musik, während sie versuchen, einen Luftballon zwischen ihren Körpern zu halten, ohne dass er den Boden berührt. Wenn ein Ballon platzt oder den Boden berührt, scheidet der entsprechende Teilnehmer aus.</p>
-    <img src="Luftballons.jpg" alt="Luftballons" width="150">
+    <h2 id="spiele">Spiele</h2>
+    <p>Weitere Ideen für Spiele:</p>
+    <ul>
+        <li>
+            <h3>Tauziehen</h3>
+            <p>Beim Tauziehen treten zwei Teams gegeneinander an und ziehen an entgegengesetzten Enden eines Seils. Das Team, das die gegnerische Mannschaft über eine markierte Linie zieht, gewinnt das Spiel.</p>
+        </li>
+        <li>
+            <h3>Dosenwerfen</h3>
+            <p>Beim Dosenwerfen versuchen die Kinder, mit Bällen Dosen umzuwerfen, die aufgestellt sind. Jedes Kind hat eine begrenzte Anzahl von Versuchen, um so viele Dosen wie möglich umzuwerfen.</p>
+        </li>
+    </ul>
 
-    
-    <h2>Schminken</h2>
-    <p>Einfache Motive mit normaler Farbe:</p>
-    <ul>
-        <li>Schmetterling</li>
-        <li>Katze</li>
-        <li>Pirat</li>
-        <!-- Weitere einfache Motive hier einfügen -->
-    </ul>
-    
-    <p>Motive mit Neonfarbe für das Schwarzlicht:</p>
-    <ul>
-        <li>Leuchtende Sternen</li>
-        <li>Glow-in-the-Dark-Schmetterling</li>
-        <li>Neon-Tiger</li>
-        <!-- Weitere Motive für Schwarzlicht hier einfügen -->
-    </ul>
+    <script>
+        // JavaScript für das Aufklappen und Zuklappen der Abschnitte
+        const toggles = document.querySelectorAll('.spiele-liste input[type="checkbox"]');
+        toggles.forEach(toggle => {
+            toggle.addEventListener('change', function() {
+                const ul = this.parentNode.querySelector('ul');
+                ul.style.display = this.checked ? 'block' : 'none';
+            });
+        });
+
+        const h2toggle = document.querySelector('h2#spiele');
+        h2toggle.addEventListener('click', function() {
+            const ul = this.nextElementSibling;
+            ul.style.display = ul.style.display === 'none' ? 'block' : 'none';
+        });
+    </script>
 </body>
 </html>
