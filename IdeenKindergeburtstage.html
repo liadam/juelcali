@@ -69,12 +69,7 @@
             margin-top: 0;
         }
 
-        .spiele-liste h3 {
-            margin-top: 0; /* Kein Abstand oben für die Überschrift */
-            cursor: pointer; /* Zeigercursor für das Aufklappsymbol */
-        }
-
-        .spiele-liste h2, .spiele-liste h3 {
+        .spiele-liste h3, .spiele-liste h2 {
             margin-top: 10px; /* Platz zwischen Überschriften und vorangehendem Inhalt */
             cursor: pointer; /* Zeigercursor für das Aufklappsymbol */
         }
@@ -90,18 +85,19 @@
             <label for="spiele-toggle"><h2>Spiele</h2></label>
             <ul>
                 <li>
-                    <h3>Stuhlpolonaise (auch Reise nach Jerusalem)</h3>    
+                    <input type="checkbox" id="stuhlpolonaise-toggle">
+                    <label for="stuhlpolonaise-toggle"><h3>Stuhlpolonaise (auch Reise nach Jerusalem)</h3></label>
                     <p>Bei der Stuhlpolonaise tanzen die Kinder um Stühle herum, während die Musik spielt. Wenn die Musik stoppt, müssen sich die Kinder schnell auf einen Stuhl setzen. Es gibt einen (oder mehrere) Stuhl weniger als Anzahl der Personen. Derjenige, der keinen Stuhl bekommt, scheidet aus.</p>
                     <img src="Stuhlpolonaise.png" alt="Stuhlpolonaise" width="150">
                     <p>Alternativ, falls nicht genug Stühle vorhanden sind, kann man auch Hula-Hoop-Reifen, Zeitungsseiten oder mit Kreide aufgemalte Kreise als Referenzorte nehmen.</p>
-                
+
                     <!-- Einrückung des Textlinks -->
                     <p class="product-link">
                         <a href="https://www.amazon.de/Eberhard-Faber-526520-Stra%C3%9Fenmalkreide-Glitzer/dp/B07KMPRFC8/ref=pd_day0fbt_thbs_d_sccl_1/261-5442370-7704214?pd_rd_w=S9NwO&content-id=amzn1.sym.a448a60d-171e-41b3-a693-2dc17f9728e0&pf_rd_p=a448a60d-171e-41b3-a693-2dc17f9728e0&pf_rd_r=HAVW4362VXN9CXC12BSV&pd_rd_wg=6noMh&pd_rd_r=d4f14da3-09f7-4ae1-a1a6-b4475cf50a7c&pd_rd_i=B07KMPRFC8&psc=1" target="_blank">
                             Straßenmalkreide auf Amazon ansehen
                         </a>
                     </p>
-                
+
                     <!-- Produktbilder nebeneinander -->
                     <div class="product-images">
                         <a href="https://www.amazon.de/Eberhard-Faber-526520-Stra%C3%9Fenmalkreide-Glitzer/dp/B07KMPRFC8" target="_blank">
@@ -116,33 +112,28 @@
         </li>
     </ul>
 
-    <h2 id="weitere-spiele">Weitere Spiele</h2>
-    <p>Hier sind einige weitere Ideen für Spiele:</p>
-    <ul>
-        <li>
-            <h3>Tauziehen</h3>
-            <p>Beim Tauziehen treten zwei Teams gegeneinander an und ziehen an entgegengesetzten Enden eines Seils. Das Team, das das andere Team über eine bestimmte Linie zieht, gewinnt.</p>
-        </li>
-        <li>
-            <h3>Dosenwerfen</h3>
-            <p>Beim Dosenwerfen versuchen die Kinder, mit Bällen Dosen umzuwerfen, die aufgestellt sind. Jedes Kind hat eine begrenzte Anzahl von Versuchen, um so viele Dosen wie möglich umzuwerfen.</p>
-        </li>
-    </ul>
-
     <script>
         // JavaScript für das Aufklappen und Zuklappen der Abschnitte
         const toggles = document.querySelectorAll('.spiele-liste input[type="checkbox"]');
         toggles.forEach(toggle => {
             toggle.addEventListener('change', function() {
-                const ul = this.parentNode.querySelector('ul');
+                const ul = this.nextElementSibling.querySelector('ul');
                 ul.style.display = this.checked ? 'block' : 'none';
             });
         });
 
-        const h2toggle = document.querySelector('h2#spiele');
+        const h2toggle = document.querySelector('.spiele-liste h2');
         h2toggle.addEventListener('click', function() {
             const ul = this.nextElementSibling;
             ul.style.display = ul.style.display === 'none' ? 'block' : 'none';
+        });
+
+        const h3toggles = document.querySelectorAll('.spiele-liste h3');
+        h3toggles.forEach(toggle => {
+            toggle.addEventListener('click', function() {
+                const ul = this.nextElementSibling;
+                ul.style.display = ul.style.display === 'none' ? 'block' : 'none';
+            });
         });
     </script>
 </body>
