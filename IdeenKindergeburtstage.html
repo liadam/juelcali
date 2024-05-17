@@ -20,7 +20,7 @@
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 
     <style>
-       .product-images {
+        .product-images {
             display: flex;
             justify-content: flex-start; /* Bilder linksbündig ausrichten */
             gap: 10px; /* Abstand zwischen den Bildern */
@@ -47,20 +47,25 @@
         }
 
         .spiele-liste li {
-            display: none; /* Versteckt die Listenelemente standardmäßig */
             margin-bottom: 5px; /* Abstand zwischen den Listenelementen */
         }
 
         .spiele-liste label {
             cursor: pointer; /* Zeigercursor für das Aufklappsymbol */
+            display: inline-block; /* Labels als Blockelemente anzeigen */
         }
 
         .spiele-liste input[type="checkbox"] {
             display: none; /* Versteckt das eigentliche Checkbox-Element */
         }
 
-        .spiele-liste input[type="checkbox"]:checked + ul {
+        .spiele-liste input[type="checkbox"]:checked ~ ul {
             display: block; /* Zeigt die untergeordnete Liste an, wenn Checkbox aktiviert ist */
+        }
+
+        .spiele-liste ul {
+            display: none; /* Versteckt die untergeordnete Liste standardmäßig */
+            margin-top: 0;
         }
     </style>
 </head>
@@ -83,7 +88,7 @@
     <h3>Stuhlpolonaise (auch Reise nach Jerusalem)</h3>
     <p>Bei der Stuhlpolonaise tanzen die Kinder um Stühle herum, während die Musik spielt. Wenn die Musik stoppt, müssen sich die Kinder schnell auf einen Stuhl setzen. Es gibt einen (oder mehrere) Stuhl weniger als Anzahl der Personen. Derjenige, der keinen Stuhl bekommt, scheidet aus.</p>
     <img src="Stuhlpolonaise.png" alt="Stuhlpolonaise" width="150">
-    <p>Alternativ, falls nicht genug Stühle vorhanden sind, kann man auch Hoolahoopreifen, Zeitungsseiten, oder mit Kreide aufgemalte Kreise als Referenzorte nehmen.<p>
+    <p>Alternativ, falls nicht genug Stühle vorhanden sind, kann man auch Hoolahoopreifen, Zeitungsseiten, oder mit Kreide aufgemalte Kreise als Referenzorte nehmen.</p>
 
     <!-- Einrückung des Textlinks -->
     <p class="product-link">
