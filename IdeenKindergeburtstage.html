@@ -53,6 +53,7 @@
         .spiele-liste label {
             cursor: pointer; /* Zeigercursor für das Aufklappsymbol */
             display: inline-block; /* Labels als Blockelemente anzeigen */
+            margin-bottom: 5px; /* Weniger Platz zwischen "Spiele" und der Überschrift */
         }
 
         .spiele-liste input[type="checkbox"] {
@@ -60,7 +61,7 @@
         }
 
         .spiele-liste input[type="checkbox"]:checked ~ ul {
-            display: block; /* Zeigt die untergeordnete Liste an, wenn Checkbox aktiviert ist */
+            display: none; /* Versteckt die untergeordnete Liste, wenn Checkbox nicht aktiviert ist */
         }
 
         .spiele-liste ul {
@@ -72,12 +73,12 @@
 <body>
     <h1>Ideen für Kindergeburtstage</h1>
 
-    <h2>Spiele</h2>
     <!-- Spiele aufklappbare Liste -->
     <ul class="spiele-liste">
         <li>
             <input type="checkbox" id="spiele-toggle">
-            <label for="spiele-toggle"><h3>Stuhlpolonaise (auch Reise nach Jerusalem)</h3></label>
+            <label for="spiele-toggle"><img src="arrow.png" alt="arrow" width="20" height="20"></label>
+            <h3>Stuhlpolonaise (auch Reise nach Jerusalem)</h3>
             <ul>
                 <li>    
                     <p>Bei der Stuhlpolonaise tanzen die Kinder um Stühle herum, während die Musik spielt. Wenn die Musik stoppt, müssen sich die Kinder schnell auf einen Stuhl setzen. Es gibt einen (oder mehrere) Stuhl weniger als Anzahl der Personen. Derjenige, der keinen Stuhl bekommt, scheidet aus.</p>
