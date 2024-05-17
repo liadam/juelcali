@@ -25,6 +25,7 @@
             justify-content: flex-start; /* Bilder linksbündig ausrichten */
             gap: 10px; /* Abstand zwischen den Bildern */
             margin-top: 20px; /* Abstand nach oben */
+            margin-left: 20px;
         }
 
         .product-images a {
@@ -32,8 +33,12 @@
         }
 
         .product-images img {
-            width: 150px; /* Größe der Bilder */
+            width: 100px; /* Größe der Bilder */
             margin-right: 10px; /* Abstand zwischen den Bildern */
+        }
+
+        .product-link {
+            margin-left: 20px; /* Einrückung des Textlinks */
         }
     </style>
 </head>
@@ -45,8 +50,14 @@
     <p>Bei der Stuhlpolonaise tanzen die Kinder um Stühle herum, während die Musik spielt. Wenn die Musik stoppt, müssen sich die Kinder schnell auf einen Stuhl setzen. Es gibt einen (oder mehrere) Stuhl weniger als Anzahl der Personen. Derjenige, der keinen Stuhl bekommt, scheidet aus.</p>
     <img src="Stuhlpolonaise.png" alt="Stuhlpolonaise" width="150">
     <p>Alternativ, falls nicht genug Stühle vorhanden sind, kann man auch Hoolahoopreifen, Zeitungsseiten, oder mit Kreide aufgemalte Kreise als Referenzorte nehmen.<p>
-    <p><a href="https://www.amazon.de/Eberhard-Faber-526520-Stra%C3%9Fenmalkreide-Glitzer/dp/B07KMPRFC8/ref=pd_day0fbt_thbs_d_sccl_1/261-5442370-7704214?pd_rd_w=S9NwO&content-id=amzn1.sym.a448a60d-171e-41b3-a693-2dc17f9728e0&pf_rd_p=a448a60d-171e-41b3-a693-2dc17f9728e0&pf_rd_r=HAVW4362VXN9CXC12BSV&pd_rd_wg=6noMh&pd_rd_r=d4f14da3-09f7-4ae1-a1a6-b4475cf50a7c&pd_rd_i=B07KMPRFC8&psc=1" target="_blank">        Straßenmalkreide auf Amazon ansehen</a></p>
-    
+
+    <!-- Einrückung des Textlinks -->
+    <p class="product-link">
+        <a href="https://www.amazon.de/Eberhard-Faber-526520-Stra%C3%9Fenmalkreide-Glitzer/dp/B07KMPRFC8/ref=pd_day0fbt_thbs_d_sccl_1/261-5442370-7704214?pd_rd_w=S9NwO&content-id=amzn1.sym.a448a60d-171e-41b3-a693-2dc17f9728e0&pf_rd_p=a448a60d-171e-41b3-a693-2dc17f9728e0&pf_rd_r=HAVW4362VXN9CXC12BSV&pd_rd_wg=6noMh&pd_rd_r=d4f14da3-09f7-4ae1-a1a6-b4475cf50a7c&pd_rd_i=B07KMPRFC8&psc=1" target="_blank">
+            Straßenmalkreide auf Amazon ansehen
+        </a>
+    </p>
+
     <!-- Produktbilder nebeneinander -->
     <div class="product-images">
         <a href="https://www.amazon.de/Eberhard-Faber-526520-Stra%C3%9Fenmalkreide-Glitzer/dp/B07KMPRFC8" target="_blank">
@@ -56,7 +67,8 @@
             <img src="https://m.media-amazon.com/images/I/81s9SkBHAcL._AC_SL1500_.jpg" alt="Strassenmalkreide2">
         </a>
     </div>
-    
+
+  
     <h3>Tauziehen</h3>
     <p>Beim Tauziehen treten zwei Teams gegeneinander an und ziehen an entgegengesetzten Enden eines Seils. Das Team, das die gegnerische Mannschaft über eine markierte Linie zieht, gewinnt das Spiel.</p>
     <img src="Tauziehen.jpg" alt="Tauziehen" width="150">
