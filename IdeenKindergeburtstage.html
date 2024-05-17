@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -20,7 +20,7 @@
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 
     <style>
-        .product-images {
+       .product-images {
             display: flex;
             justify-content: flex-start; /* Bilder linksbündig ausrichten */
             gap: 10px; /* Abstand zwischen den Bildern */
@@ -40,12 +40,46 @@
         .product-link {
             margin-left: 100px; /* Einrückung des Textlinks */
         }
+
+        .spiele-liste {
+            list-style-type: none; /* Entfernt die standardmäßige Aufzählung */
+            padding-left: 20px; /* Einrückung der Liste */
+        }
+
+        .spiele-liste li {
+            display: none; /* Versteckt die Listenelemente standardmäßig */
+            margin-bottom: 5px; /* Abstand zwischen den Listenelementen */
+        }
+
+        .spiele-liste label {
+            cursor: pointer; /* Zeigercursor für das Aufklappsymbol */
+        }
+
+        .spiele-liste input[type="checkbox"] {
+            display: none; /* Versteckt das eigentliche Checkbox-Element */
+        }
+
+        .spiele-liste input[type="checkbox"]:checked + ul {
+            display: block; /* Zeigt die untergeordnete Liste an, wenn Checkbox aktiviert ist */
+        }
     </style>
 </head>
 <body>
     <h1>Ideen für Kindergeburtstage</h1>
     
-    <h2>Spiele</h2>
+    <!-- Spiele aufklappbare Liste -->
+    <ul class="spiele-liste">
+        <li>
+            <input type="checkbox" id="spiele-toggle">
+            <label for="spiele-toggle">Spiele</label>
+            <ul>
+                <li>Stuhlpolonaise (auch Reise nach Jerusalem)</li>
+                <li>Tauziehen</li>
+                <li>Luftballontanz</li>
+            </ul>
+        </li>
+    </ul>
+
     <h3>Stuhlpolonaise (auch Reise nach Jerusalem)</h3>
     <p>Bei der Stuhlpolonaise tanzen die Kinder um Stühle herum, während die Musik spielt. Wenn die Musik stoppt, müssen sich die Kinder schnell auf einen Stuhl setzen. Es gibt einen (oder mehrere) Stuhl weniger als Anzahl der Personen. Derjenige, der keinen Stuhl bekommt, scheidet aus.</p>
     <img src="Stuhlpolonaise.png" alt="Stuhlpolonaise" width="150">
