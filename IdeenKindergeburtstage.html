@@ -52,7 +52,7 @@
 
         .spiele-liste label {
             cursor: pointer; /* Zeigercursor für das Aufklappsymbol */
-            display: inline-block; /* Labels als Blockelemente anzeigen */
+            display: block; /* Blockelement für das Label */
             margin-bottom: 5px; /* Weniger Platz zwischen "Spiele" und der Überschrift */
         }
 
@@ -61,12 +61,17 @@
         }
 
         .spiele-liste input[type="checkbox"]:checked ~ ul {
-            display: none; /* Versteckt die untergeordnete Liste, wenn Checkbox nicht aktiviert ist */
+            display: block; /* Zeigt die untergeordnete Liste an, wenn Checkbox aktiviert ist */
         }
 
         .spiele-liste ul {
             display: none; /* Versteckt die untergeordnete Liste standardmäßig */
             margin-top: 0;
+        }
+
+        .spiele-liste h3 {
+            margin-top: 0; /* Kein Abstand oben für die Überschrift */
+            cursor: pointer; /* Zeigercursor für das Aufklappsymbol */
         }
     </style>
 </head>
@@ -77,13 +82,13 @@
     <ul class="spiele-liste">
         <li>
             <input type="checkbox" id="spiele-toggle">
-            <label for="spiele-toggle"><img src="arrow.png" alt="arrow" width="20" height="20"></label>
-            <h3>Stuhlpolonaise (auch Reise nach Jerusalem)</h3>
+            <label for="spiele-toggle">Spiele</label>
             <ul>
-                <li>    
+                <li>
+                    <h3>Stuhlpolonaise (auch Reise nach Jerusalem)</h3>
                     <p>Bei der Stuhlpolonaise tanzen die Kinder um Stühle herum, während die Musik spielt. Wenn die Musik stoppt, müssen sich die Kinder schnell auf einen Stuhl setzen. Es gibt einen (oder mehrere) Stuhl weniger als Anzahl der Personen. Derjenige, der keinen Stuhl bekommt, scheidet aus.</p>
                     <img src="Stuhlpolonaise.png" alt="Stuhlpolonaise" width="150">
-                    <p>Alternativ, falls nicht genug Stühle vorhanden sind, kann man auch Hoolahoopreifen, Zeitungsseiten, oder mit Kreide aufgemalte Kreise als Referenzorte nehmen.</p>
+                    <p>Alternativ, falls nicht genug Stühle vorhanden sind, kann man auch Hula-Hoop-Reifen, Zeitungsseiten oder mit Kreide aufgemalte Kreise als Referenzorte nehmen.</p>
                 
                     <!-- Einrückung des Textlinks -->
                     <p class="product-link">
