@@ -22,13 +22,18 @@
     <style>
         .product-images {
             display: flex;
-            justify-content: space-around; /* Zentriert und trennt die Bilder */
+            justify-content: flex-start; /* Bilder linksbündig ausrichten */
+            gap: 10px; /* Abstand zwischen den Bildern */
             margin-top: 20px; /* Abstand nach oben */
         }
 
+        .product-images a {
+            display: block; /* Jedes Link-Element auf einer neuen Zeile */
+        }
+
         .product-images img {
-            width: 80px; /* Größe der Bilder */
-            margin: 0 5px; /* Abstand zwischen den Bildern */
+            width: 150px; /* Größe der Bilder */
+            margin-right: 10px; /* Abstand zwischen den Bildern */
         }
     </style>
 </head>
